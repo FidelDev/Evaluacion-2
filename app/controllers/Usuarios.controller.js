@@ -62,7 +62,7 @@ exports.getUserById = (req, res) => {
         .then(User => {
             res.status(200).json({
                 message: " Successfully Get a User with id = " + UserId,
-                usuario: User
+                User: User
             });
         })
         . catch(error => {
