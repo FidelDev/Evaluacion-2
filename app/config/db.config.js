@@ -25,7 +25,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
  
-db.Libro = require('../models/libros.model.js')(sequelize, Sequelize);//Usa la variable Libro para almacanar el modelo de la tabla Libro//cambiar
-db.Prestamo = require('../models/prestamos.model.js')(sequelize, Sequelize);//Usar la variable Prestamo para almacenar el modelo de la tabla Prestamo//cambiar
+db.Usuarios = require('../models/usurio.model.js')(sequelize, Sequelize);
  
 module.exports = db;

@@ -1,0 +1,21 @@
+https://evaluacion-2-mkfv.onrender.com
+
+
+//TABLE LIBROS
+POST https://evaluacion-2-mkfv.onrender.com/api/usuario/create
+GET https://evaluacion-2-mkfv.onrender.com/api/usuario/all
+GET https://evaluacion-2-mkfv.onrender.com/api/usuario/onebyid/:{id}
+PUT https://evaluacion-2-mkfv.onrender.com/api/usuario/update/:{id}
+DELETE https://evaluacion-2-mkfv.onrender.com/api/usuario/delete/:{id}
+
+
+{
+  "id_usuario": 1,
+  "nombre": "Fidel",
+  "apellido": "Rosales",
+  "email": "fidel@gmail.com",
+  "telefono": 32882803,
+  "direccion": "Cubulco",
+  "echa_Registro": 2024-01-03,
+  "estado": "ACTIVO"
+}

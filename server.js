@@ -5,14 +5,14 @@ const app = express();
 
 var bodyParser = require('body-parser');
  
-const db = require('./app/config/db.config.js');
+const db = require('./app/config/db.config.js');//
   
 // force: true will drop the table if it already exists
 db.sequelize.sync({force: true}).then(() => {
   console.log('Drop and Resync with { force: true }');
 }); 
 
-let router = require('./app/routes/router.js');
+let router = require('./app/routers/router.js');///app/routes/router.js
 
 const cors = require('cors')
 const corsOptions = {
