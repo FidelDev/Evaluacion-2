@@ -59,10 +59,10 @@ exports.getUserById = (req, res) => {
     let UserId = req.params.id_usuario;
 
     Usuarios.findByPk(UserId)
-        .then(UserId => {
+        .then(User => {
             res.status(200).json({
                 message: " Successfully Get a User with id = " + UserId,
-                usuario: UserId
+                usuario: User
             });
         })
         . catch(error => {
@@ -80,7 +80,7 @@ exports.getUserById = (req, res) => {
 exports.updateById = async (req, res) => {
     try{
         let UserId = req.params.id_usuario;
-        let Usuario = await Libro.findByPk(UserId);
+        let Usuario = await Usuarios.findByPk(UserId);
     
         if(!Usuario){
             // return a response to USer
