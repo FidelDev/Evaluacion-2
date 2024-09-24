@@ -6,7 +6,7 @@ const usuario = require('../controllers/Usuarios.controller.js');
 //controllers.js
 router.post('/api/usuario/create', usuario.create);
 router.get('/api/usuario/all', usuario.retrieveAllUsuario);
-router.get('/api/usuario/onebyid/:userId', usuario.getUserById);//
+router.get('/api/usuario/onebyid/:UserId', usuario.getUserById);//
 router.put('/api/usuario/update/:UserId', usuario.updateById);//
 router.delete('/api/usuario/delete/:userId', usuario.deleteById);//
 

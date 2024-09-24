@@ -38,7 +38,7 @@ apellido
 email
 telefono
 direccion
-echa_Registro
+fecha_Registro
 estado
 */
 

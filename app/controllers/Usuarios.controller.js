@@ -56,12 +56,12 @@ exports.retrieveAllUsuario = (req, res) => {
 //READ THE USER BY ID --validando
 exports.getUserById = (req, res) => {
     // find all User information from 
-    let userId = req.params.id_usuario;
+    let UserId = req.params.id_usuario;//id_usuario
 
-    Usuarios.findByPk(userId)
+    Usuarios.findByPk(UserId)
         .then(user => {
             res.status(200).json({
-                message: " Successfully Get a User with id = " + userId,
+                message: " Successfully Get a User with id = " + UserId,
                 user: user
             });
         })
@@ -96,10 +96,9 @@ exports.updateById = async (req, res) => {
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 email: req.body.email,
-
                 telefono: req.body.telefono,
                 direccion: req.body.direccion,
-                echa_Registro: req.body.echa_Registro,
+                fecha_Registro: req.body.fecha_Registro,
                 estado: req.body.estado
             }
             let result = await Usuarios.update(updatedObject, {returning: true, where: {id_usuario: UserId}});
