@@ -53,16 +53,16 @@ exports.retrieveAllUsuario = (req, res) => {
         });
 }
 
-//READ THE USER BY ID
+//READ THE USER BY ID --validando
 exports.getUserById = (req, res) => {
     // find all User information from 
-    let UserId = req.params.id_usuario;
+    let userId = req.params.id_usuario;
 
-    Usuarios.findByPk(UserId)
-        .then(User => {
+    Usuarios.findByPk(userId)
+        .then(user => {
             res.status(200).json({
-                message: " Successfully Get a User with id = " + UserId,
-                User: User
+                message: " Successfully Get a User with id = " + userId,
+                user: user
             });
         })
         . catch(error => {
